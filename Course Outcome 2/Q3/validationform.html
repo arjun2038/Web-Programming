@@ -4,31 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verify</title>
+    <title>Registration Form</title>
 </head>
 <body>
-    <form>
-    Username: <input type="text" id=name>
-    Password: <input type="text" id=pass>
-    Age     : <input type="number" id=age>
+    <form name="formvalid">
+    Username: <input type="text" name="nam"> <br> <br>
+    Password: <input type="password" name="pass">  <br> <br>
+    Confirm Password <input type="password" name="con"> <br><br>
+    Age          : <input type="text" name="age"> <br> <br>
+    Mobile Number: <input type="number" name="number1"><br><br>
+    Email        : <input type="email" name="email1"> <br><br>
 
-    <input type="submit" value="Submit" onclick="check()">
+    <input type="button" value="Submit" onclick="check()">
    </form>
     <script>
         function check(){
-        first=document.getElementById("name").value
-        second=document.getElementById("pass").value
-        if(first==""&&second=="")
-        {
-            alert("Enter The PassWord And User Name")
-        }
-        else if(first==""){
+        var first=document.formvalid.nam.value
+        var second=document.formvalid.pass.value
+        var age1=document.formvalid.age.value
+        var num=document.formvalid.number1.value
+        var confirm=document.formvalid.con.value
+        var emai=document.formvalid.email1.value
+        if(first==""){
             alert("Enter the User Name")
         }
-        else{
+        else if(second==""){
             alert("Enter the Password")
         }
-
+        else if(confirm=="")
+        {
+            alert("Enter Confirm Password")
+        }
+        else if(age1=="")
+        {
+            alert("Enter the Age")
+        }
+        else if(isNaN(age1))
+        {
+            alert("Enter Age as Digits only")
+        }
+        else if(age1<18||age1>35)
+        {
+            alert("Enter a Age between 18 and 35")
+        }
+        else if(num=="")
+        {
+            alert("Enter The Mobile Number")
+            return
+        }
+        else if(num.length!=10)
+        {
+            alert("Enter Ten Digit Mobile number")
+            return
+        }
+        else if(emai=="")
+        {
+            alert("Enter The Email Address")
+        }
+        else if(second!=confirm)
+        {
+            alert("Both passwords are Different,Enter the password again")
+        }
+        else{
+            alert("Succesfully Done")
+        }
         }
     </script>
     
