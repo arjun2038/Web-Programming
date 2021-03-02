@@ -1,0 +1,32 @@
+#Create a HTML page to display a new image and text when the mouse comes over
+#the existing content in the page using JavaScript Event Handling
+<html> 
+<head> 
+<script language="javascript"> 
+function preload() 
+{ 
+topon=new Image(100,50); 
+topon.src="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwiXr437qIDvAhUpyzgGHTcLAxYQPAgI"; 
+topoff=new Image(260,280); 
+topoff.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQQgo3w2wiJ0cj15emON1SqxeHFwi_QqviEg&usqp=CAU"; 
+} 
+function myMouseOn(n) 
+{ 
+preload(); 
+imageON=eval(n+"on.src"); 
+document.images[n].src=imageON; 
+} 
+function myMouseOff(n) 
+{ 
+imageOFF=eval(n+"off.src"); 
+document.images[n].src=imageOFF; 
+} 
+</script> 
+</head> 
+<body > 
+<h1> Demo for mouse over</h1> 
+<a href="#" onMouseOut="myMouseOff('top')"; onMouseOver="myMouseOn('top')";> 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdPt7VpIMjdA07vuRwR16l78c-dk4viC_bUg&usqp=CAU" alt="Show Next" name="top"> 
+</a> 
+</body> 
+</html>
