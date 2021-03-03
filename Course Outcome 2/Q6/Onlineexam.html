@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Exam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<center></center><body>
+    <h1>ONLINE EXAM</h1>
+    <form onsubmit="check(this)">
+        <label class="ques">1)Which Is the Platform Independent Language?</label> <br>
+        <br><input type="radio" name="ans">c
+        <input type="radio" name="ans">c++
+        <input type="radio" name="ans">java
+        <input type="radio" name="ans">BASIC
+        <br><br>
+        <label class="ques">2)Which is class of all class in java? </label><br>
+        <br><input type="radio" name="ans1">object
+        <input type="radio" name="ans1">Math
+        <input type="radio" name="ans1">System
+        <input type="radio" name="ans1">Graphic<br><br>
+        <label class="ques">3)Frame package is in which package?</label><br><br>
+        <input type="radio" name="ans2">AWT
+        <input type="radio" name="ans2">Applet
+        <input type="radio" name="ans2">Lang
+        <input type="radio" name="ans2">Swing<br><br>
+        <label class="ques">4)Java does not support..</label><br><br>
+        <input type="radio" name="ans3">Inheritance
+        <input type="radio" name="ans3">Multiple inheritance
+        <input type="radio" name="ans3">Polymorphism
+        <input type="radio" name="ans3">Encryption <br><br>
+        <input type="submit" value="Submit"> <input type="reset" value="Reset">
+    </form>
+    <script>
+        var i=0;
+        function check(form)
+        {
+            if(form.ans[2].checked)
+            {
+                i=i+1;
+            }
+            if(form.ans1[0].checked)
+            {
+                i=i+1;
+            }
+            if(form.ans2[0].checked)
+            {
+                i=i+1;
+            }
+            if(form.ans3[1].checked)
+            {
+                i=i+1
+            }
+        alert("Your mark is "+i)    
+        }
+    </script>
+    
+</body>
+</html>
